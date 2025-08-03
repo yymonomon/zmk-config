@@ -12,6 +12,10 @@
     quick-release;
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE N0 N1 N2 N3 N4 N5 N6 N7 N8 N9>;
+};
+
 / {
     macros {
         qu: qu {
@@ -67,7 +71,7 @@
             bindings = <
                 &none      &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &dc        &none
                 &none      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &none
-                           &kp X      &kp V      &kp J      &kp D      &kp Z        &kp SQT    &kp W      &kp MINUS  &qe        &cs
+                           &kp X      &kp V      &kp J      &kp D      &kp Z        &none      &kp W      &kp SQT    &qe        &cs
                                                  &sl 2      &kp SPACE  &none        &none      &kp R      &sl 1
             >;
         };
@@ -76,10 +80,10 @@
             display-name = "nums";
 
             bindings = <
-                &none      &kp EQUAL  &kp N9     &kp N8     &kp N7     &none        &none      &kp STAR   &kp PLUS   &tg        &trans     &none
-                &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &none      &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
-                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp FSLH   &trans     &kp BSLH   &trans
-                                                 &sl 3      &trans     &none        &none      &none      &none
+                &none      &tg        &kp N9     &kp N8     &kp N7     &none        &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp CARET  &none
+                &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &kp PLUS   &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
+                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp AMPS   &kp STAR   &kp EQUAL  &none
+                                                 &sl 3      &trans     &none        &none      &trans     &none
             >;
         };
 
@@ -89,8 +93,8 @@
             bindings = <
                 &none      &none      &none      &none      &none      &none        &none      &none      &none      &none      &none      &none
                 &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &none        &none      &kp LEFT   &kp UP     &kp RIGHT  &none      &tog 4
-                           &none      &none      &none      &none      &none        &none      &kp HOME   &kp DOWN   &kp END    &none
-                                                 &none      &none      &none        &none      &none     &sl 3
+                           &none      &kp K_CUT  &kp K_COPY &kp K_PASTE &none       &none      &kp HOME   &kp DOWN   &kp END    &none
+                                                 &none      &trans     &none        &none      &trans     &sl 3
             >;
         };
 
@@ -120,9 +124,40 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_minus  {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp MINUS>;
+            layers = <0 1 2>;
+        };
+
+        combo_under  {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp UNDER>;
+            layers = <0 1 2>;
+        };
+
+        combo_lshft  {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            require-prior-idle-ms = <100>;
+            bindings = <&sk LSHFT>;
+            layers = <0 1 2>;
+        };
+
+        combo_rshft  {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            require-prior-idle-ms = <100>;
+            bindings = <&sk RSHFT>;
+            layers = <0 1 2>;
+        };
+
         combo_tab  {
             timeout-ms = <50>;
             key-positions = <15 16>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp TAB>;
             layers = <0 1 2>;
         };
@@ -130,20 +165,21 @@
         combo_bspc_del  {
             timeout-ms = <50>;
             key-positions = <19 20>;
+            require-prior-idle-ms = <100>;
             bindings = <&bd>;
             layers = <0 1 2>;
         };
 
         combo_esc  {
             timeout-ms = <50>;
-            key-positions = <14 15 16>;
+            key-positions = <14 16>;
             bindings = <&kp ESC>;
             layers = <0 1 2>;
         };
 
         combo_ret  {
             timeout-ms = <50>;
-            key-positions = <19 20 21>;
+            key-positions = <19 21>;
             bindings = <&kp RET>;
             layers = <0 1 2>;
         };
@@ -162,6 +198,20 @@
             layers = <0>;
         };
 
+        combo_blsh  {
+            timeout-ms = <50>;
+            key-positions = <2 14>;
+            bindings = <&kp BSLH>;
+            layers = <0 1 2>;
+        };
+
+        combo_flsh  {
+            timeout-ms = <50>;
+            key-positions = <9 21>;
+            bindings = <&kp FSLH>;
+            layers = <0 1 2>;
+        };
+
         combo_lpar  {
             timeout-ms = <50>;
             key-positions = <4 16>;
@@ -173,6 +223,20 @@
             timeout-ms = <50>;
             key-positions = <7 19>;
             bindings = <&kp RPAR>;
+            layers = <0 1 2>;
+        };
+
+        combo_lt  {
+            timeout-ms = <50>;
+            key-positions = <16 27>;
+            bindings = <&kp LT>;
+            layers = <0 1 2>;
+        };
+
+        combo_gt {
+            timeout-ms = <50>;
+            key-positions = <19 30>;
+            bindings = <&kp GT>;
             layers = <0 1 2>;
         };
 
@@ -201,20 +265,6 @@
             timeout-ms = <50>;
             key-positions = <20 31>;
             bindings = <&kp RBKT>;
-            layers = <0 1 2>;
-        };
-
-        combo_lt  {
-            timeout-ms = <50>;
-            key-positions = <16 27>;
-            bindings = <&kp LT>;
-            layers = <0 1 2>;
-        };
-
-        combo_gt {
-            timeout-ms = <50>;
-            key-positions = <19 30>;
-            bindings = <&kp GT>;
             layers = <0 1 2>;
         };
     };
