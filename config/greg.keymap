@@ -69,9 +69,9 @@
             display-name = "night";
 
             bindings = <
-                &none      &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &kp SQT    &none
+                &none      &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &none      &none
                 &none      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &none
-                           &kp X      &kp V      &kp J      &kp D      &kp Z        &none      &kp W      &cq        &de        &kp SQT
+                           &kp X      &kp V      &kp J      &kp D      &kp Z        &none      &kp W      &kp SQT    &cq        &de
                                                  &sl 2      &kp SPACE  &none        &none      &kp R      &sl 1
             >;
         };
@@ -80,9 +80,9 @@
             display-name = "nums";
 
             bindings = <
-                &none      &none      &kp N9     &kp N8     &kp N7     &none        &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp CARET  &none
-                &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &kp PIPE   &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
-                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp AMPS   &trans     &trans     &none
+                &none      &none      &kp N9     &kp N8     &kp N7     &none        &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none      &none
+                &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &kp CARET  &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
+                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp AMPS   &kp PIPE   &trans     &trans
                                                  &sl 3      &trans     &none        &none      &trans     &none
             >;
         };
