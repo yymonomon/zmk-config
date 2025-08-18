@@ -72,7 +72,7 @@
                 &none      &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &none      &none
                 &none      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &none
                            &kp X      &kp V      &kp J      &kp D      &kp Z        &none      &kp W      &kp SQT    &cq        &de
-                                                 &sl 2      &kp SPACE  &none        &none      &kp R      &sl 1
+                                                 &none      &sl 2      &kp SPACE    &kp R      &sl 1      &none
             >;
         };
 
@@ -83,7 +83,7 @@
                 &none      &none      &kp N9     &kp N8     &kp N7     &none        &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none      &none
                 &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &kp CARET  &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
                            &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp AMPS   &kp PIPE   &trans     &trans
-                                                 &sl 3      &trans     &none        &none      &trans     &none
+                                                 &none      &sl 3      &trans       &trans     &none      &none
             >;
         };
 
@@ -94,7 +94,7 @@
                 &none      &none      &none      &none      &none      &none        &kp PG_UP  &none      &none      &none      &none      &none
                 &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &none        &kp PG_DN  &kp LEFT   &kp UP     &kp RIGHT  &none      &tog 4
                            &none      &kp K_CUT  &kp K_COPY &kp K_PASTE &none       &none      &kp HOME   &kp DOWN   &kp END    &none
-                                                 &none      &trans     &none        &none      &trans     &sl 3
+                                                 &none      &none      &trans       &trans     &sl 3      &none
             >;
         };
 
