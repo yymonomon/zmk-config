@@ -8,6 +8,15 @@
 #define BTCL &bt BT_CLR
 #define BTCA &bt BT_CLR_ALL
 
+#define BASE 0
+#define NUMS 1
+#define NAVI 2
+#define FUNC 3
+#define GAME 4
+
+#include "include/greg.h"
+#include "include/combos.dtsi"
+
 &sk {
     quick-release;
 };
@@ -17,22 +26,7 @@
 };
 
 / {
-    macros {
-        qu: qu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp Q &kp U>;
-        };
-    };
-
     behaviors {
-        bd: bspc_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         de: dot_excl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -44,20 +38,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp QMARK>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        qe: qmark_excl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        tg: tilde_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp TILDE>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -118,162 +98,6 @@
                            &kp LCTRL  &kp Z      &kp S      &kp C      &kp V        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                                                  &kp LALT   &kp SPACE  &kp B        &none      &kp BSPC   &none
             >;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        equal  {
-            require-prior-idle-ms = <100>;
-            key-positions = <14 16>;
-            bindings = <&kp EQUAL>;
-            layers = <0 1 2>;
-        };
-
-        semi  {
-            require-prior-idle-ms = <100>;
-            key-positions = <19 21>;
-            bindings = <&kp SEMI>;
-            layers = <0 1 2>;
-        };
-
-        lshft  {
-            require-prior-idle-ms = <100>;
-            key-positions = <14 15>;
-            bindings = <&sk LSHFT>;
-            layers = <0 1 2>;
-        };
-
-        rshft  {
-            require-prior-idle-ms = <100>;
-            key-positions = <20 21>;
-            bindings = <&sk RSHFT>;
-            layers = <0 1 2>;
-        };
-
-        tab  {
-            require-prior-idle-ms = <100>;
-            key-positions = <15 16>;
-            bindings = <&kp TAB>;
-            layers = <0 1 2>;
-        };
-
-        bspc_del  {
-            require-prior-idle-ms = <100>;
-            key-positions = <19 20>;
-            bindings = <&bd>;
-            layers = <0 1 2>;
-        };
-
-        esc  {
-            key-positions = <14 15 16>;
-            bindings = <&kp ESC>;
-            layers = <0 1 2>;
-        };
-
-        ret  {
-            key-positions = <19 20 21>;
-            bindings = <&kp RET>;
-            layers = <0 1 2>;
-        };
-
-        caps_lock  {
-            timeout-ms = <75>;
-            key-positions = <15 20>;
-            bindings = <&kp CAPS>;
-            layers = <0>;
-        };
-
-        caps_word  {
-            timeout-ms = <75>;
-            key-positions = <16 19>;
-            bindings = <&caps_word>;
-            layers = <0>;
-        };
-
-        tilde  {
-            key-positions = <14 25>;
-            bindings = <&tg>;
-            layers = <0 1 2>;
-        };
-
-        bslh  {
-            key-positions = <21 32>;
-            bindings = <&kp BSLH>;
-            layers = <0 1 2>;
-        };
-
-        plus  {
-            key-positions = <15 26>;
-            bindings = <&kp PLUS>;
-            layers = <0 1 2>;
-        };
-
-        minus  {
-            key-positions = <20 31>;
-            bindings = <&kp MINUS>;
-            layers = <0 1 2>;
-        };
-
-        star  {
-            key-positions = <16 27>;
-            bindings = <&kp STAR>;
-            layers = <0 1 2>;
-        };
-
-        fslh  {
-            key-positions = <19 30>;
-            bindings = <&kp FSLH>;
-            layers = <0 1 2>;
-        };
-
-        lpar  {
-            key-positions = <4 16>;
-            bindings = <&kp LPAR>;
-            layers = <0 1 2>;
-        };
-
-        rpar  {
-            key-positions = <7 19>;
-            bindings = <&kp RPAR>;
-            layers = <0 1 2>;
-        };
-
-        lt  {
-            key-positions = <5 17>;
-            bindings = <&kp LT>;
-            layers = <0 1 2>;
-        };
-
-        gt {
-            key-positions = <6 18>;
-            bindings = <&kp GT>;
-            layers = <0 1 2>;
-        };
-
-        lbrc  {
-            key-positions = <3 15>;
-            bindings = <&kp LBRC>;
-            layers = <0 1 2>;
-        };
-
-        rbrc  {
-            key-positions = <8 20>;
-            bindings = <&kp RBRC>;
-            layers = <0 1 2>;
-        };
-
-        lbkt  {
-            key-positions = <2 14>;
-            bindings = <&kp LBKT>;
-            layers = <0 1 2>;
-        };
-
-        rbkt {
-            key-positions = <9 21>;
-            bindings = <&kp RBKT>;
-            layers = <0 1 2>;
         };
     };
 };
