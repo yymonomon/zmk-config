@@ -46,12 +46,12 @@
         compatible = "zmk,keymap";
 
         zero {
-            display-name = "night";
+            display-name = "nightey";
 
             bindings = <
-                &none      &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &none      &none
-                &none      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &none
-                           &kp X      &kp V      &kp J      &kp D      &kp Z        &none      &kp W      &kp SQT    &cq        &de
+                &none      &none      &kp F      &kp L      &kp K      &kp J        &kp P      &kp G      &kp O      &kp U      &none      &none
+                &none      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp I      &kp E      &none
+                           &kp B      &kp V      &kp SQT    &kp D      &none        &none      &kp W      &de        &cq        &kp Z
                                                  &none      &sl 2      &kp SPACE    &kp R      &sl 1      &none
             >;
         };
