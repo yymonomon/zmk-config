@@ -60,9 +60,9 @@
             display-name = "nums";
 
             bindings = <
-                &none      &none      &kp N9     &kp N8     &kp N7     &none        &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none      &none
-                &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &kp CARET  &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
-                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp AMPS   &kp PIPE   &trans     &trans
+                &none      &none      &kp N9     &kp N8     &kp N7     &none        &kp PRCNT  &kp AMPS   &kp PIPE   &kp CARET  &none      &none
+                &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &kp DLLR   &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
+                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp HASH   &trans     &trans     &kp AT
                                                  &none      &sl 3      &trans       &trans     &none      &none
             >;
         };
