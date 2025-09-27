@@ -52,13 +52,13 @@
         COMBO(rshft,    &sk RSHFT,   RM2 RM3,     BASE NUMS NAVI, 30, 0)
         COMBO(bd,       &bd,         RM1 RM2,     BASE NUMS NAVI, 30, 0)
         // left hand horizontal
-        COMBO(x,        &kp X,       LT3 LT2,     BASE NUMS NAVI, 30, 0)
-        COMBO(qu,       &qu,         LT2 LT1,     BASE NUMS NAVI, 30, 0)
-        COMBO(q,        &kp Q,       LB2 LB1,     BASE NUMS NAVI, 30, 0)
+        // COMBO(x,        &kp X,       LT3 LT2,     BASE NUMS NAVI, 30, 0)
+        // COMBO(qu,       &qu,         LT2 LT1,     BASE NUMS NAVI, 30, 0)
+        // COMBO(q,        &kp Q,       LB2 LB1,     BASE NUMS NAVI, 30, 0)
         // right hand horizontal
-        COMBO(semi,     &kp SEMI,    RT2 RT3,     BASE NUMS NAVI, 30, 0)
-        COMBO(equal,    &kp EQUAL,   RB2 RB3,     BASE NUMS NAVI, 30, 0)
-        COMBO(under,    &kp UNDER,   RB1 RB2,     BASE NUMS NAVI, 30, 0)
+        // COMBO(semi,     &kp SEMI,    RT2 RT3,     BASE NUMS NAVI, 30, 0)
+        // COMBO(equal,    &kp EQUAL,   RB2 RB3,     BASE NUMS NAVI, 30, 0)
+        // COMBO(under,    &kp UNDER,   RB1 RB2,     BASE NUMS NAVI, 30, 0)
         // left hand vertical
         COMBO(lbkt,     &kp LBKT,    LT3 LM3,     BASE NUMS NAVI, 30, 0)
         COMBO(lbrc,     &kp LBRC,    LT2 LM2,     BASE NUMS NAVI, 30, 0)
