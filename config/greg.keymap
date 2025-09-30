@@ -43,7 +43,7 @@
         ue: under_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp QMARK>;
+            bindings = <&kp UNDER>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
